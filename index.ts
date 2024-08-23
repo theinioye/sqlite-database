@@ -10,7 +10,7 @@ async function main () {
    const authors = await listAuthors()
 
   authors.forEach(author => {
-    console.log(`${author.id} : ${author.firstname}, ${author.lastname}`)
+    console.log(`${author.id} : gi${author.firstname}, ${author.lastname}`)
   })
   
     
