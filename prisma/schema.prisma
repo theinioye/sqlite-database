@@ -7,6 +7,14 @@ model Author {
   id          Int   @id @default (autoincrement())
   firstname    String?
   lastname      String?
+  books          Book   []
+}
+
+model Book{
+  id   Int @id @default(autoincrement())
+  bookTitle        String @unique
+  author  Author?  @relation(fields: [authorId], references: [id])
+  authorId   Int? 
 }
 
 
