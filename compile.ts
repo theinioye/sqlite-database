@@ -1,5 +1,5 @@
 import { createUser } from "./createUser";
-import readlineSync from "readline-sync";
+import readlineSync from "readline-sync"
 
 async function main() {
   const firstname = readlineSync
@@ -11,7 +11,10 @@ async function main() {
   console.log(`Thank you. Author's name will now be logged.`);
 
   const authorName = await createUser(firstname, lastname);
-
-  console.log(authorName);
+ 
+  console.log (authorName)
 }
-main();
+main()
+
+
+
