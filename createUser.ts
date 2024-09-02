@@ -1,6 +1,6 @@
-import { prisma } from "./question";
+import { prisma } from "./prisma";
 
-export async function createUser(firstName: string, lastName: string) {
+export async function createUser (firstName: string, lastName: string) {
   const author = await prisma.author.create({
     data: {
       firstname: firstName,

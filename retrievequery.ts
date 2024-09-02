@@ -1,19 +1,20 @@
-import {prisma} from "./prisma"
+import { prisma } from "./prisma";
 
-export async function retrieve( authorid : number ) {
-    const author = await prisma.author.findUnique({
-        where : { id : authorid},
-        select : { 
-            firstname : true,
-            lastname : true,
-        
-            books : {
-                select : {
-                bookTitle :true, 
-                },
+export async function retrieve(authorid: number) {
+  const author = await prisma.author.findUnique({
+    where: { id: authorid },
+    select: {
+        id :true,
+      firstname: true,
+      lastname: true,
+
+      books: {
+        select: {
+            id : true,
+          bookTitle: true,
         },
+      },
     },
-    })
- return author
+  });
+  return author;
 }
- 

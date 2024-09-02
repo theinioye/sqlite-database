@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 const givenFirstName = readlineSync.question(`Please provide author's first name`)
 const givenLastName =  readlineSync.question(`Please provide author's last name`)
 
-async function main (){
+export async function run (){
     const author = await prisma.author.create({
         data: {
             firstname : givenFirstName,
@@ -16,13 +16,3 @@ async function main (){
 }
 
 
-main()
-
-.then(async () => {
-    await prisma.$disconnect()
-})
-.catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-})
