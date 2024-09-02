@@ -1,5 +1,5 @@
 import readlineSync from "readline-sync";
-import { run as runAuthorMenu } from "./question";
+import { run as runAuthorMenu } from "./authorMenu";
 import { run as runBookMenu } from "./book/bookmenu";
 
 const userInput =

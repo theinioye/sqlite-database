@@ -1,7 +1,7 @@
 import readlineSync from "readline-sync";
 import { run as runDeleteAuthors } from "./deleteauthor";
 import { run as runRetrieveAuthors } from "./retrieve";
-import { run as runUpdateAuthors } from "./update";
+import { run as runUpdateAuthors } from "./updateAuthor";
 import { run as runCreateAuthor } from "./compile";
 import { listAuthors as runListAuthors } from "./listauthors";
 

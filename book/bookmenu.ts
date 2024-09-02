@@ -1,5 +1,9 @@
 import readlineSync from "readline-sync";
 import { run as runCreateBook } from "../createbookfunction";
+import { run as runRetrieveBook } from "./retrievebook";
+import { run as runUpdateBook } from "../updateBook";
+import { run as runListBooks } from "../listBooks";
+import {run as runDeleteBook} from "../deleteBook"
 
 export async function run() {
   const userInput = readlineSync.questionInt(
@@ -14,25 +18,26 @@ export async function run() {
     }
 
     case 2: {
-      console.log(`You have selected [1] Create Book`);
-      runCreateBook();
+      console.log(`You have selected [2] Retrieve Book`);
+      runRetrieveBook();
       break;
     }
 
     case 3: {
-      console.log(`You have selected [1] Create Book`);
-      runCreateBook();
+      console.log(`You have selected [3] Update Book`);
+      runUpdateBook();
       break;
     }
 
     case 4: {
-      console.log(`You have selected [1] Create Book`);
-      runCreateBook();
+      console.log(`You have selected [4] Delete Book`);
+      runDeleteBook()
+
       break;
     }
     case 5: {
-      console.log(`You have selected [1] Create Book`);
-      runCreateBook();
+      console.log(`You have selected [6] List All Books`);
+      runListBooks()
       break;
     }
     case 6: {

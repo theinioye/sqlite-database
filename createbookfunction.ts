@@ -12,7 +12,7 @@ export async function run() {
 
   const authorId = readlineSync.questionInt(`Please provide author Id ➡️`);
 
-  console.log(`Thank you. Author details will now be logged.`);
+  console.log(`Thank you. Your new book has been created.`);
 
   const newBook = await createBook(title, authorId);
 

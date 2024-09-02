@@ -1,6 +1,6 @@
 import { listAuthors } from "./listauthors";
 import readlineSync from "readline-sync";
-import { retrieve } from "./retrievequery";
+import { retrieve } from "./retrieveAuthorquery";
 
 export async function run () {
   const authors = await listAuthors();

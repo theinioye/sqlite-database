@@ -1,4 +1,4 @@
-import {prisma} from "./prisma"
+import {prisma} from "../prisma"
 
 export async function createBook (title : string ,authorId: number ){
    const book =  await prisma.book.create ({
