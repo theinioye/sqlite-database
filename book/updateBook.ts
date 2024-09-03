@@ -1,8 +1,8 @@
 import readlineSync from "readline-sync";
-import { updateBook } from "./updateBookQuery";
-import { listBooks } from "./listBooksQuery";
+import { updateBook } from "../updateBookQuery";
+import { listBooks } from "../listBooksQuery";
 import { retrieve as retrieveBook } from "./retrievebookquery";
-import { listAuthors } from "./listauthors";
+import { listAuthors } from "../listauthors";
 
 export async function run() {
   const bookslist = await listBooks();
@@ -33,6 +33,8 @@ export async function run() {
 
   const updatedBook = await updateBook(userInput, newBookTitle, newAuthorId);
 
-  console.log(`You have successfully update a book. This is what it looks like now `)
-  console.log (updatedBook);
+  console.log(
+    `You have successfully updated a book. This is what it looks like now `
+  );
+  console.log(updatedBook);
 }

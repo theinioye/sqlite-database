@@ -1,5 +1,5 @@
 import readlineSync from "readline-sync";
-import { retrieve } from "../retrievebookquery";
+import { retrieve } from "./retrievebookquery";
 import { listBooks } from "../listBooksQuery";
 
 export async function run() {
